@@ -30,8 +30,8 @@ L.control.layers({
     "BasemapAT Oberfläche": L.tileLayer.provider('BasemapAT.surface'),
 }, {
     "Sehenswürdigkeiten": overlays.sights,
-    "Vienna sightseeing Linien": overlays.lines,
-    "Vienna sightseeing Haltestellen": overlays.stops,
+    "Vienna Sightseeing Linien": overlays.lines,
+    "Vienna Sightseeing Haltestellen": overlays.stops,
     "Fußgängerzonen": overlays.zones,
 }).addTo(map);
 
