@@ -17,6 +17,7 @@ let overlays = {
     lines: L.featureGroup().addTo(map),
     stops: L.featureGroup().addTo(map),
     zones: L.featureGroup().addTo(map),
+    hotels: L.featureGroup().addTo(map),
 }
 
 // Layercontrol
@@ -33,6 +34,7 @@ L.control.layers({
     "Vienna Sightseeing Linien": overlays.lines,
     "Vienna Sightseeing Haltestellen": overlays.stops,
     "Fußgängerzonen": overlays.zones,
+    "Hotels und Unterkünfte": overlays.hotels,
 }).addTo(map);
 
 // Maßstab
