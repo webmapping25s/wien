@@ -50,7 +50,7 @@ async function loadSights(url) {
     //console.log(jsondata);
     L.geoJSON(jsondata, {
         attribution: "Datenquelle: <a href='https://data.wien.gv.at'>Stadt Wien</a>",
-        pointToLayer: function(feature, latlng) {
+        pointToLayer: function (feature, latlng) {
             return L.marker(latlng, {
                 icon: L.icon({
                     iconUrl: "icons/photo.png",
@@ -70,7 +70,7 @@ async function loadLines(url) {
     //console.log(jsondata);
     L.geoJSON(jsondata, {
         attribution: "Datenquelle: <a href='https://data.wien.gv.at'>Stadt Wien</a>",
-        style: function(feature) {
+        style: function (feature) {
             //console.log(feature.properties.LINE_NAME);
             let lineColor;
 
@@ -105,7 +105,7 @@ async function loadStops(url) {
     //console.log(jsondata);
     L.geoJSON(jsondata, {
         attribution: "Datenquelle: <a href='https://data.wien.gv.at'>Stadt Wien</a>",
-        pointToLayer: function(feature, latlng) {
+        pointToLayer: function (feature, latlng) {
             //console.log(feature.properties);
 
             return L.marker(latlng, {
@@ -147,7 +147,7 @@ async function loadHotels(url) {
     //console.log(jsondata);
     L.geoJSON(jsondata, {
         attribution: "Datenquelle: <a href='https://data.wien.gv.at'>Stadt Wien</a>",
-        pointToLayer: function(feature, latlng) {
+        pointToLayer: function (feature, latlng) {
             //console.log(feature.properties.KATEGORIE_TXT);
             let iconName;
 
