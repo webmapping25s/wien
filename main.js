@@ -219,6 +219,17 @@ async function loadHotels(url) {
                     popupAnchor: [0, -37]
                 })
             });
+        },
+        onEachFeature: function (feature, layer) {
+            layer.bindPopup(`
+                <h3>${feature.properties.BETRIEB}</h3>
+                <h4>${feature.properties.BETRIEBSART_TXT} ${feature.properties.KATEGORIE_TXT}</h4>
+                <hr>
+                Addr.: ${feature.properties.ADRESSE}<br>
+                Tel.: <a href="tel:${feature.properties.KONTAKT_TEL}">${feature.properties.KONTAKT_TEL}</a><br>
+                <a href="mailto:${feature.properties.KONTAKT_EMAIL}">${feature.properties.KONTAKT_EMAIL}</a><br>
+                <a href="${feature.properties.WEBLINK1}" target="wien">Homepage</a><br>
+            `);
         }
     }).addTo(overlays.hotels);
 }
